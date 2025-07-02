@@ -1,0 +1,87 @@
+<?php
+$login = false;
+$showError = false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include 'partials/_dbconnect.php';
+    $eid = $_POST["eid"];
+    $pswd = $_POST["pswd"]; 
+    
+     
+    $sql = "SELECT * from signin where eid='$eid' AND pswd='$pswd'";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
+    if ($num == 1){
+        $login = true;
+        session_start();
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $eid;
+        header("location: welcome.php");
+
+    } 
+    else{
+        $showError = "Invalid Credentials";
+    }
+}
+    
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>CIS</title>
+  </head>
+  <body>
+    <?php require 'partials/_nav.php' ?>
+    <?php
+    if($login){
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You are logged in
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    if($showError){
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Authentication failed! </strong> '. $showError.'
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    ?>
+
+    <div class="container my-4">
+     <h1 class="text-center">Enter Your Credentials to Proceed</h1>
+     <form action="login.php" method="post">
+        <div class="form-group">
+            <label for="eid">Employee ID</label>
+            <input type="text" minLength="6" maxLength="6" class="form-control" id="eid" name="eid" aria-describedby="emailHelp" Required placeholder="Enter your employee ID">
+            
+        </div>
+        <div class="form-group">
+            <label for="pswd">Password</label>
+            <input type="password" minLength="8" maxLength="25" class="form-control" id="pswd" name="pswd" Required placeholder="Enter your password">
+        </div>
+       
+         
+        <button type="submit" class="btn btn-primary">Login</button>
+        <small id="emailHelp" class="form-text text-muted"><p class="mb-0">Create an account <a href="signup.php"> using this link.</a></p></small>
+        <small id="emailHelp" class="form-text text-muted"><p class="mb-0">Forgot password? <a href="forgotpswd.php"> reset using this link.</a></p></small>
+     </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
