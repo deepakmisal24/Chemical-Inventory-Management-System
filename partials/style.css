@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif;
+        }
+        .main-div {
+            width: auto; 
+            height: auto;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-div{
+            width: auto; 
+            height: 35px;
+            margin-left: 125px;
+            margin-top:28px;
+            justify-content: left;
+            align-items: left;
+            
+        }
+        .center-div {
+            width: auto;
+            height: auto;
+            font-size:large;
+            background: -webkit-linear-gradient(left, #5DADE2, #00c6ff);
+            margin-top:auto;
+            padding: 20px 0 0 0;
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,.03);
+            border-radius: 5px;
+        }
+        .center-div-welcome {
+            
+            font-size:xx-large;
+            background: -webkit-linear-gradient(left, #f40505, #00c6ff);
+            margin-top:auto;
+            padding: 20px 0 0 0;
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,.03);
+            border-radius: 5px;
+        }
+        h1 {
+            width:100%;
+            height:20px;
+            font-size: 35px;
+            color: #000;
+            text-align: center;
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,.03);
+            border-radius: 10px;
+            margin:10px;
+        }
+        th, td {
+            border: 1px solid #f2f2f2;
+            padding: 8px 30px;
+            text-align: center;
+            color: grey;
+        }
+        th {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        td { 
+            font-size: 13px; 
+        }
+        .email-style {
+            font-size: 14px;
+            color: grey;
+            display: inline-block;
+            background: #f2f2f2;
+            border-radius: 2px;
+            line-height: 30px;
+            padding: 0 14px;
+        }
+        .post-class {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
