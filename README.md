@@ -30,7 +30,8 @@ This project is a lightweight and user-friendly **Chemical Inventory Management 
 ---
 
 ## 📁 Folder Structure
-chemical_inventory_system/
+```
+C:/xampp/htdocs/chemical_inventory_system/
 │
 ├── welcome.php
 ├── inventory_form.php        # Add items
@@ -55,5 +56,36 @@ chemical_inventory_system/
     ├── slide1.png
     ├── slide2.png
     └── slide3.png
- 
+ ```
 
+---
+
+## ⚙️ Installation Instructions
+
+1. 🔽 Download or clone the project.
+2. 🧰 Install and open **XAMPP**.
+3. 🟢 Start **Apache** and **MySQL** from the XAMPP control panel.
+4. 📂 Move the project folder into the mention directory
+5. 🛢️ Open **phpMyAdmin** and:
+- Create a database named `chemistry`
+- Import the required SQL tables (`chemicals`, `glassware`, `instrument`, `signin`, `transactions`)
+6. 🔧 Open `partials/_dbconnect.php` and update your database credentials (if needed).
+7. 🌐 Launch your browser and go to:
+    ```http://localhost/chemical_inventory_system/welcome.php```
+
+# 🗃️ Database Tables
+1. chemicals
+2. glassware
+3. instrument
+4. signin
+5. transactions
+
+# 📸 Demo
+
+# 💡 Future Improvements
+1. Role-based login (Admin, Lab Assistant, Faculty)
+2. Two-factor authentication for better security
+3. Password strength meter and reset link via email
+4. Barcode/QR code scanner for item tracking
+5. Export inventory to PDF, Excel
+6. Integration with lab equipment or sensors
