@@ -79,6 +79,7 @@ C:/xampp/htdocs/chemical_inventory_system/
 3. instrument
 4. signin
 5. transactions
+> ![SQL code for database setup](database/chemistry.sql)
 
 ## 📸 Screenshots
 > ![Sample Output](screenshots/login-inventory-system.png)
