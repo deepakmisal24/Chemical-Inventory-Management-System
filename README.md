@@ -73,16 +73,19 @@ C:/xampp/htdocs/chemical_inventory_system/
 7. 🌐 Launch your browser and go to:
     ```http://localhost/chemical_inventory_system/welcome.php```
 
-# 🗃️ Database Tables
+## 🗃️ Database Tables
 1. chemicals
 2. glassware
 3. instrument
 4. signin
 5. transactions
 
-# 📸 Demo
+## 📸 Screenshots
+> ![Sample Output](screenshots/login-inventory-system.png)
+> ![Sample Output](screenshots/home_page.png)
+> ![More](screenshots)
 
-# 💡 Future Improvements
+## 💡 Future Improvements
 1. Role-based login (Admin, Lab Assistant, Faculty)
 2. Two-factor authentication for better security
 3. Password strength meter and reset link via email
