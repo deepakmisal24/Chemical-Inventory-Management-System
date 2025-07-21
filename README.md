@@ -1,7 +1,8 @@
 # 🧪 Chemical Inventory Management System
 
 ## 👨‍🎓 Developed By:
-**Deepak Misal**, Final Year B.E. Student  
+**Deepak Misal**
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/deepakmisal24/)  
 
 ---
 
