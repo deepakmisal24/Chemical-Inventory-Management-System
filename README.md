@@ -7,7 +7,7 @@
 ---
 
 ## 📌 Description
-This project is a lightweight and user-friendly **Chemical Inventory Management System** designed for managing chemical, glassware, and instrument stock in laboratories. Built using **PHP, MySQL, and Bootstrap**, it allows authenticated users to add, update, delete, and view inventory records efficiently.
+This project is a lightweight and user-friendly **Chemical Inventory Management System** designed for managing chemical, glassware, and instrument stock in laboratories. Built using **PHP, MySQL, and Bootstrap**, it allows authenticated users to add, update, delete, and view inventory records efficiently and also supports partial updates, derived field calculations and session-based transaction logging. Deployed using the XAMPP stack (Apache, MySQL, PHP).
 
 ---
 
