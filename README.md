@@ -53,7 +53,6 @@ C:/xampp/htdocs/chemical_inventory_system/
 │   └── _nav.php
 │
 └── images/
-    ├── bldeacet.png
     ├── slide1.png
     ├── slide2.png
     └── slide3.png
